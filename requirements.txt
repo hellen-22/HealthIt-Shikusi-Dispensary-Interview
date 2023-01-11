@@ -2,3 +2,5 @@ Django
 djangorestframework
 django-phonenumber-field
 django-phonenumbers
+djangorestframework
+drf-nested-routers
