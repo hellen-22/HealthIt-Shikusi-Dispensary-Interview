@@ -4,3 +4,6 @@ django-phonenumber-field
 django-phonenumbers
 djangorestframework
 drf-nested-routers
+model_bakery
+pytest-django
+djangorestframework_simplejwt

@@ -1,3 +1,5 @@
+import uuid
+
 from django.db import models
 from django.conf import settings
 from phonenumber_field.modelfields import PhoneNumberField
@@ -17,9 +19,10 @@ MARITAL_STATUS_CHOICES = (
 
 #Model to record patients demographics
 class Patient(models.Model):
+    #id = models.UUIDField(primary_key = True, default = uuid.uuid4, editable = False, max_length=8)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     age = models.PositiveIntegerField()
-    phone_number = PhoneNumberField(help_text='Contact phone number')
+    phone_number = PhoneNumberField(help_text='Contact phone number', null=True, blank=True)
     gender = models.CharField(max_length=100, choices=GENDER_CHOICES)
     marital_status = models.CharField(max_length=100, choices=MARITAL_STATUS_CHOICES)
 
