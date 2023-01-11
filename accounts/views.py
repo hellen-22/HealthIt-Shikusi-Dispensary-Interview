@@ -10,7 +10,7 @@ from .models import *
 class UserViewSet(ListModelMixin, RetrieveModelMixin, GenericViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = [IsAdminUser]
+    #permission_classes = [IsAdminUser]
 
     
 
